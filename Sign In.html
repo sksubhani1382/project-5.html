@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="Mystyles1.css">
+
+
+  <link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  
+  integrity="sha384-pzjw8f+ua7Kw1TIq9r1a0cnJ60Lw5j5YE1Dc+JBOeGAfQq0u7l3tM6Q5p1AGIckz"
+  crossorigin="anonymous">
+
+  
+</head>
+<body style="background-color: rgb(194, 244, 244);">
+
+    <center><h1 style="font-family:Georgia, 'Times New Roman', Times, serif;"><img border="3" class="logo" src="shoplandlogo3.jpg" width="50" height="50">SHOP HUB</h1></center>
+    <nav>
+        <ul style="text-align: left;">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            
+        </ul>
+        <ul style="text-align: right;">
+            <li><a href="Registration.html">Registration</a></li>
+            <li><a href="Sign In.html" >Sign In</a></li>   
+            <li><a href="Cart.html">Cart</a></li>             
+        </ul>
+    </nav><br><br><br>
+
+
+
+ <center class="sign-form" ><div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1 class="text-center">SignIn Form</h1><br><br>
+        <form id="signInForm">
+          <div class="form-group">
+            <label for="email">Email</label><br>
+            <input type="email" class="form-control" id="email" name="email" required autofocus>
+          </div><br>
+          <div class="form-group">
+            <label for="password">Password</label><br>
+            <input type="password" class="form-control" id="password" name="password" required minlength="6">
+          </div><br>
+          <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div></center> 
+
+  <script>
+    // JavaScript Validation using Alerts
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('signInForm');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get the values of the form fields
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Perform validations
+        if (!email) {
+          alert('Email is required.');
+          return;
+        }
+
+        if (!validateEmail(email)) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+
+        if (!password) {
+          alert('Password is required.');
+          return;
+        }
+
+        if (password.length < 6) {
+          alert('Password must be at least 6 characters long.');
+          return;
+        }
+
+        // If all validations pass
+       
+        alert('Sign In Successful!');
+        // You can add further logic here, such as redirecting the user or submitting the form data to a server
+      });
+
+      // Simple email validation function
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+      }
+    });
+  </script><br><br><br><br>
+
+<footer>
+    <p>@copy;www.shop hub.com All Rights Are Reserved...</p>
+</footer>
+</body>
+</html>

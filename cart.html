@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP HUB - Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Mystyles1.css">
+</head>
+
+<body>
+    <center>
+        <h1 style="font-family:Georgia, 'Times New Roman', Times, serif;"><img border="3" class="logo" src="shoplandlogo3.jpg" width="50" height="50">SHOP HUB</h1>
+    </center>
+    <nav>
+        <ul style="text-align: left;">
+            <li><a href="Home.html"><i class="fa fa-house"></i>Home</a></li>
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+        <ul style="text-align: right;">
+            <li><a href="Registration.html">Registration</a></li>
+            <li><a href="Sign In.html">Sign In</a></li>
+            <li><a href="Cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <center>
+        <h1 style="color:rgb(241, 105, 105)">Your Cart</h1>
+    </center>
+
+    <div class="container">
+        <h2>Items in Your Cart</h2>
+        <div id="cart-items" class="row"></div>
+        <h3>Total Cost: <span id="cart-total">0</span> Rupees</h3>
+    </div><br><br><br>
+    
+    <center><img border="10" src="shopland2.jpg" width="1300" height="600"></center>
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <footer>
+        <p>@copy;www.shophub.com All Rights Are Reserved...</p>
+    </footer>
+
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+            document.getElementById('cart-count').innerText = cart.items.length;
+            document.getElementById('cart-total').innerText = cart.total;
+
+            let cartItemsDiv = document.getElementById('cart-items');
+            cart.items.forEach(item => {
+                let itemDiv = document.createElement('div');
+                itemDiv.className = 'col-md-4';
+                itemDiv.innerHTML = `<h4>${item.name}</h4><p>Price: ${item.price} Rupees</p>`;
+                cartItemsDiv.appendChild(itemDiv);
+            });
+        }
+
+        window.onload = loadCart;
+    </script>
+
+</body>
+
+</html>

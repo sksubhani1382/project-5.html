@@ -1,0 +1,300 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+  }
+  
+  /* Logo styling */
+  .logo {
+    float:left;
+    margin-right: 10px;
+    border: 3px solid #000; 
+    border-color: red;
+    
+  }
+
+
+
+
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    color: black;
+}
+
+header {
+    background-color: rgb(240, 151, 231);
+    color: rgb(7, 240, 92);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header .logo {
+    float: left;
+}
+
+header .cart-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: rgb(240, 151, 231);
+    color: rgb(7, 240, 92);
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+}
+
+section h2 {
+    text-decoration: underline;
+    text-shadow: 5px 10px 4px rgb(141, 118, 227);
+}
+
+section p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(240, 151, 231);
+    color: rgb(1, 0, 0);
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/*moving style*/
+
+.move{
+        margin:20px;
+        width:20px;
+        height:20px;
+        position:relative;
+        animation:repeatit 15s linear 0s infinite alternate;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color:#000000;
+        background-color: #f38080;
+        
+    }
+    @keyframes repeatit{
+        from {left:0%;}
+        to{left:100%;}
+    }
+
+
+/*Sign in form style*/
+
+.sign-form{
+    width: 300px;
+    margin: 0px auto;
+    padding: 0px;
+    
+}
+
+.sign-form h2 {
+    text-align:center;
+    
+}
+
+.sign-form input {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+   
+}
+
+.sign-form button {
+    width: 50%;
+    padding: 10px;
+    background-color: #4bdf8b;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+   
+}
+
+
+
+/* Registration Form Styles */
+
+.registration-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form h2 {
+    text-align: center;
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4bdf8b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration-form button:hover {
+    background-color: #d1d1d1;
+}
+
+.error-message {
+    color: rgb(236, 9, 9);
+    font-size: 12px;
+}
+
+/* Cart Styles */
+.header .cart-items-container {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+    display: none;
+}
+
+.header .cart-items-container.active {
+    right: 0;
+    display: block;
+}
+
+.header .cart-items-container .cart-item {
+    position: relative;
+    margin: 2rem 0;
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container .cart-item img {
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item .content h3 {
+    
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .content .price {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.header .cart-items-container .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #218838;
+}
+
+/* Product Hover Effect */
+.product-card:hover .add-to-cart-btn {
+    display: block;
+}
+
+.product-card {
+    position: relative;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.product-card .add-to-cart-btn {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cart-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.empty-cart {
+    font-size: 18px;
+    color: #888;
+}

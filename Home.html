@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP HUB</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Mystyles1.css">
+    <style>
+        .product-item {
+            height: auto;
+            margin-bottom: 30px; /* Space between rows */
+        }
+        .product-item img {
+            width: 200px; 
+            height: 270px;
+            margin-bottom: 15px; /* Space below the image */
+            padding: 30px;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth transition for transform and opacity */
+        }
+
+        .product-item img:hover {
+            animation: blink 1.5s ease-in-out infinite; /* Apply the blink animation with improved timing */
+            transform: scale(1.05); /* Slight scale effect on hover */
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            25% { opacity: 0.7; }
+            50% { opacity: 0.4; }
+            75% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        .col-md-2 {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 30px; 
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+        <h1 style="font-family:Georgia, 'Times New Roman', Times, serif;"><img border="3" class="logo" src="shoplandlogo3.jpg" width="50" height="50">SHOP HUB</h1>
+    </center>
+    <nav>
+        <ul style="text-align: left;">
+            <li><a href="Home.html"><i class="fa fa-house"></i>Home</a></li>
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+        <ul style="text-align: right;">
+            <li><a href="Registration.html">Registration</a></li>
+            <li><a href="Sign In.html">Sign In</a></li>
+            <li><a href="Cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <center>
+        <h1 style="color:rgb(241, 105, 105)">Products For You</h1>
+    </center>
+
+    <div class="container">
+        <h2>Men's Ware</h2>
+        <div class="row">
+            <center>
+            <div class="col-md-2 product-item">
+                <h4>Men's T-shirts</h4>
+                <img src="home1.jpg" alt="Men's T-shirts">
+                <p>Cost: 500 Rupees<br>80% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Men\'s T-shirts', 500)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Formal Shirts</h4>
+                <img src="home2.jpg" alt="Formal Shirts">
+                <p>Cost: 500 Rupees<br>30% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Formal Shirts', 500)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Men's Raincoat</h4>
+                <img src="home3.jpg" alt="Men's Raincoat">
+                <p>Cost: 800 Rupees<br>50% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Men\'s Raincoat', 800)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Suits for Men</h4>
+                <img src="home4.jpg" alt="Suits for Men">
+                <p>Cost: 2000 Rupees<br>40% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Suits for Men', 2000)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Men's Jeans</h4>
+                <img src="home5.jpg" alt="Men's Jeans">
+                <p>Cost: 600 Rupees<br>50% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Men\'s Jeans', 600)">Add To Cart</button>
+            </div></center>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Women's Ware</h2>
+        <div class="row">
+            <center>
+            <div class="col-md-2 product-item">
+                <h4>Sarees</h4>
+                <img src="home7.jpg" alt="Sarees">
+                <p>Cost: 200 Rupees<br>50% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Sarees', 200)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Cotton Silk Sarees</h4>
+                <img src="home8.jpg" alt="Cotton Silk Sarees">
+                <p>Cost: 2000 Rupees<br>30% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Cotton Silk Sarees', 2000)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Gowns</h4>
+                <img src="home9.jpg" alt="Gowns">
+                <p>Cost: 700 Rupees<br>40% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Gowns', 700)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Dresses</h4>
+                <img src="home10.jpg" alt="Dresses">
+                <p>Cost: 1000 Rupees<br>50% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Dresses', 1000)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Dresses</h4>
+                <img src="home11.jpg" alt="Dresses">
+                <p>Cost: 800 Rupees<br>20% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Dresses', 800)">Add To Cart</button>
+            </div></center>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Mobiles/Laptops</h2>
+        <div class="row">
+            <center>
+            <div class="col-md-2 product-item">
+                <h4>Realme</h4>
+                <img src="home13.jpg" alt="Realme">
+                <p>Cost: 16000 Rupees<br>30% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Realme', 16000)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Vivo</h4>
+                <img src="home14.jpg" alt="Vivo">
+                <p>Cost: 18000 Rupees<br>20% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Vivo', 18000)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>OnePlus</h4>
+                <img src="home15.jpg" alt="OnePlus">
+                <p>Cost: 20000 Rupees<br>20% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('OnePlus', 20000)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Lenovo</h4>
+                <img src="home16.jpg" alt="Lenovo">
+                <p>Cost: 60000 Rupees<br>30% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Lenovo', 60000)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>HP</h4>
+                <img src="home17.jpg" alt="HP">
+                <p>Cost: 90000 Rupees<br>10% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('HP', 90000)">Add To Cart</button>
+            </div></center>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Home Furnitures</h2>
+        <div class="row">
+            <center>
+            <div class="col-md-2 product-item">
+                <h4>Beds</h4>
+                <img src="home19.jpg" alt="Beds">
+                <p>Cost: 12000 Rupees<br>30% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Beds', 12000)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Clocks</h4>
+                <img src="home20.jpg" alt="Clocks">
+                <p>Cost: 1000 Rupees<br>10% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Clocks', 1000)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Stove</h4>
+                <img src="home21.jpg" alt="Stove">
+                <p>Cost: 2000 Rupees<br>20% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Stove', 2000)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Grocery Container</h4>
+                <img src="home22.jpg" alt="Grocery Container">
+                <p>Cost: 1000 Rupees<br>30% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Grocery Container', 1000)">Add To Cart</button>
+            </div>
+            <div class="col-md-2 product-item">
+                <h4>Sofa</h4>
+                <img src="home23.jpg" alt="Sofa">
+                <p>Cost: 15000 Rupees<br>20% offer</p>
+                <button class="btn btn-primary" onclick="addToCart('Sofa', 15000)">Add To Cart</button>
+            </div></center>
+        </div>
+    </div>
+
+    <script>
+        let cart = {
+            items: [],
+            total: 0
+        };
+
+        function addToCart(name, price) {
+            cart.items.push({ name: name, price: price });
+            cart.total += price;
+            document.getElementById('cart-count').innerText = cart.items.length;
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    </script>
+</body>
+
+</html>
